@@ -23,16 +23,12 @@ class Show extends Component {
         return (
             //parent
             <div>
-                <div className="yourQuotes" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-                    Your Quote of The Day!
-                </div>
-
-                <div className="randomQuote">
+                <div className="randomQuote" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
                     {this.props.see_quote.map(quote => {
                         return (
                             <div className="myQuote">
                                 <h5>{quote.words}</h5>
-                                <h5>By {quote.author}</h5>
+                                <h5>-{quote.author}</h5>
 
                             </div>
                         );

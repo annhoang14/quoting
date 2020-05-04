@@ -15,14 +15,14 @@ class App extends Component {
   generateQuote = quote => {
 
     const newQuoteList = [];
-    newQuoteList.push(quote);
+    newQuoteList.push(quote); //create a new list with one element with a quote
 
-    this.setState(prevState => {
-      if (this.state.see_quote.length != 0) {
-        this.state.see_quote.pop();
+    this.setState(prevState => { //set state 
+      if (this.state.see_quote.length !== 0) { //if see_quote list is not empty
+        this.state.see_quote.pop(); //pop it, and be empty
       }
 
-      return { see_quote: newQuoteList };
+      return { see_quote: newQuoteList }; //then update see_quote to newQuoteList
     });
 
 
@@ -30,13 +30,11 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ display: "flex" }}>
+      <div className="main" style={{ display: "flex" }}>
         {console.log('quotes:', this.state.quotes)}
         <div style={{ flex: 2 }}>
-          <Quote generateQuote={this.generateQuote} />
-        </div>
-        <div style={{ flex: 2 }}>
-          <Show see_quote={this.state.see_quote} />
+          <Quote generateQuote={this.generateQuote} /> {/*pass button into Quote class*/}
+          <Show see_quote={this.state.see_quote} /> {/*pass see_quote into Show to use*/}
         </div>
       </div>
     )
