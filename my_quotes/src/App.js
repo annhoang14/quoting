@@ -4,6 +4,12 @@ import Quote from "./Quote.js";
 import Show from "./Show.js";
 import Button from "./Button.js";
 
+/*
+Another way to write state at the beginning of a class component is simply:
+state = {see_quote: [] }
+
+You will see both used in practice. 
+*/
 class App extends Component {
   constructor(props) {
     super(props)
@@ -11,7 +17,17 @@ class App extends Component {
       see_quote: []
     }
   }
+  /*
+  I would like see_quote to be a string instead of a list with one element. 
+  I would name this variable simply quote given the context. Someone reading the code would be able to pick up
+  a difference between a quotes list and a quote being the one that is actually displayed.
+  */
 
+  /*
+    I would like generateQuote to accept a string. then this.setState will look like:
+    this.setState({quote: generatedQuote});
+    No need to pass in prevState if we don't access it within this.setState. 
+  */
   generateQuote = quote => {
 
     const newQuoteList = [];
@@ -27,6 +43,8 @@ class App extends Component {
 
 
   };
+
+//Always remove extraneous comments and console.logs from finished product
 
   render() {
     return (
