@@ -8,6 +8,10 @@ class Button extends Component {
         }
     }
 
+    /*This is an appropriate use of prevState. Only comment is what is your reasoning for 
+    wanting to display the quote number? 
+    
+    I also do not see this.state.value anywhere on the UI if you meant for it to appear.*/
     handleButtonClick = () => {
         this.setState(prevState => { //updates state
             return { value: prevState.value + 1 };
