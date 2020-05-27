@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import { Button } from 'antd';
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      chosenQuote: {},
+      chosenQuote: {
+        words: "It always seems impossible until it is done.",
+        author: "-Nelson Mandela"
+      },
       quotesList: [
         {
           words: "You're off to great places, today is your day. Your mountain is waiting, so get on your way.",
@@ -64,17 +69,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="App">
         <header>
           <h1>Quote of the Day</h1>
           <br />
-          <button
+          <Button
             className="generateQuote"
+            shape="round"
             onClick={() => this.generateQuote()}
           >New Quote
-          </button>
+          </Button>
         </header>
-        <p className="quote">{this.state.chosenQuote.words}
+        <p className="quote">
+          {this.state.chosenQuote.words}
           <br />
           {this.state.chosenQuote.author}</p>
       </div>
