@@ -13,3 +13,20 @@
   color: white;
 }
 
+.generateQuote {
+  display: inline-block;
+  border-radius: 70%;
+}
+
+.quote{
+  display: inline-block;
+  border-style: dotted;
+  color: salmon;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 35px;
+  
+}
