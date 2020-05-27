@@ -13,3 +13,19 @@
   color: white;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.generateQuote {
+  display: inline-block;
+}
+
+.quote{
+  display: inline-block;
+  border-style: double;
+  text-align: center;
+  
+}
